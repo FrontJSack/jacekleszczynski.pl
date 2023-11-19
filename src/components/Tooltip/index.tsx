@@ -7,31 +7,34 @@ type Props = {
 function Tooltip(props: Props) {
   const [isVisible, setIsVisible] = createSignal(false);
   const [clickCount, setClickCount] = createSignal(0);
-
+  
   const messages = [
-    "Hi there!",
-    "Clicked again?",
-    "Still here?",
-    "Persistent, aren't you?",
-    "What's up?",
-    "Again? Really?",
-    "You're curious!",
-    "Not cool!",
-    "Give it a break!",
-    "That's annoying!",
-    "Hands off!",
-    "No more clicks!",
-    "Seriously?!",
-    "Ouch! That hurts!",
-    "You're persistent!",
-    "Why the curiosity?",
-    "I'm getting tired!",
-    "I'm bored!",
-    "Enough's enough!",
-    "Find another hobby!",
-    "Stop, please!",
-    "Okay, last one!",
-    "That's it, I'm done!",
+    "Unclick to close",
+    "“Yesterday I was clever, so I wanted to change the world. Today I am wise, so I am changing myself.” ~ Me",
+    "“The saddest aspect of life right now is that science gathers knowledge faster than society gathers wisdom.” ~ Isaac Asimov",
+    "The fool doth think he is wise, but the wise man knows himself to be a fool. ~ William Shakespeare [Unclick to close]",
+    "“Whenever you find yourself on the side of the majority, it is time to reform (or pause and reflect).” ~ Mark Twain",
+    "“Knowing yourself is the beginning of all wisdom.” ~ Aristotle",
+    "“When someone loves you, the way they talk about you is different. You feel safe and comfortable.” ~  Jess C. Scott",
+    "“The only true wisdom is in knowing you know nothing.”",
+    "“Count your age by friends, not years. Count your life by smiles, not tears.” ~ John Lenon",
+    "“Never laugh at live dragons.” ~ J.R.R. Tolkien",
+    "“Never let your sense of morals prevent you from doing what is right.” ~ Isaac Asimov, Foundation",
+    "“The unexamined life is not worth living.” ~ Socrates",
+    "“Turn your wounds into wisdom.” ~ Oprah Winfrey",
+    "“Angry people are not always wise.” ~ Jane Austen, Pride and Prejudice",
+    "Let no man pull you so low as to hate him. ~ Martin Luther King Jr.",
+    "“The man of knowledge must be able not only to love his enemies but also to hate his friends.” ~ Friedrich Nietzsche",
+    "“The measure of intelligence is the ability to change.” ~ Albert Einstein",
+    "“You will do foolish things, but do them with enthusiasm.” ~ Colette",
+    "“Failure is the condiment that gives success its flavor.” ~ Truman Capote",
+    "“Knowledge speaks, but wisdom listens” ~ Jimi Hendrix",
+    "“You yourself, as much as anybody in the entire universe, deserve your love and affection.” ~ Sharon Salzberg",
+    "“Even strength must bow to wisdom sometimes.” ~ Rick Riordan, The Lightning Thief",
+    "“He who knows all the answers has not been asked all the questions.” ~ Confucius",
+    "“Music is ... A higher revelation than all Wisdom & Philosophy” ~ Ludwig van Beethoven",
+    "“Wonder is the beginning of wisdom.” ~ Socrates",
+    "“Any fool can know. The point is to understand.” ~ Albert Einstein",
   ];
 
   const currentMessage = () => {
@@ -51,17 +54,11 @@ function Tooltip(props: Props) {
             setClickCount((count) => count + 1);
           }
         }}
-        onMouseUp={() => {
-          setIsVisible(false);
-        }}
         onTouchStart={() => {
           setIsVisible(!isVisible());
           if (isVisible()) {
             setClickCount((count) => count + 1);
           }
-        }}
-        onTouchEnd={() => {
-          setIsVisible(false);
         }}
       >
         {props.children}
@@ -69,7 +66,7 @@ function Tooltip(props: Props) {
 
       <Show when={isVisible()}>
         <div class="absolute left-1/2 -translate-x-1/2 -translate-y-24 mt-1 w-auto max-h-[70px] p-2 bg-black text-white text-center rounded-lg z-10 shadow-custom border border-primary-500 whitespace-normal after:content-[''] after:block after:rotate-45 after:w-4 after:h-4 after:shadow-custom after:absolute after:-bottom-2 after:-translate-x-1/2 after:left-1/2 after:bg-black after:z-20">
-          <p class="w-max">{currentMessage()}</p>
+          <p class="w-max" style="max-width: 500px;">{currentMessage()}</p>
         </div>
       </Show>
     </div>
