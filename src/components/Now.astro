@@ -1,0 +1,25 @@
+---
+import Card from "./Card/index.astro";
+import Pulse from "./Pulse.astro";
+---
+
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-1">
+  <div class="flex justify-between w-full items-start mb-2">
+    <div class="flex flex-col">
+      <h2>Now</h2>
+      <a href="" target="_blank">
+        <span class="text-xs text-gray-500 cursor-pointer">what's that ?</span>
+      </a>
+      <img
+      width="200"
+      height="200"
+      src="/Dgspectrum_logo_.png"
+      class="w-auto max-h-[200px] select-none absolute right-[-110px] bottom-[-20px] z-[-1] opacity-50 md:opacity-100 md:relative md:right-auto md:bottom-auto md:z-auto pointer-events-none"
+      alt="memoji of Jack"
+    />
+    </div>
+    <Pulse />
+  </div>
+  <p class="text-xs">Founder of DG Spectrum. <br>Currently working on company site.</p>
+  
+</Card>
