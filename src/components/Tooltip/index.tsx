@@ -9,7 +9,6 @@ function Tooltip(props: Props) {
   const [clickCount, setClickCount] = createSignal(0);
   
   const messages = [
-    "Unclick to close",
     "“Yesterday I was clever, so I wanted to change the world. Today I am wise, so I am changing myself.” ~ Me",
     "“The saddest aspect of life right now is that science gathers knowledge faster than society gathers wisdom.” ~ Isaac Asimov",
     "The fool doth think he is wise, but the wise man knows himself to be a fool. ~ William Shakespeare [Unclick to close]",
@@ -65,8 +64,8 @@ function Tooltip(props: Props) {
       </div>
 
       <Show when={isVisible()}>
-        <div class="absolute left-1/2 -translate-x-1/2 -translate-y-24 mt-1 w-auto max-h-[70px] p-2 bg-black text-white text-center rounded-lg z-10 shadow-custom border border-primary-500 whitespace-normal after:content-[''] after:block after:rotate-45 after:w-4 after:h-4 after:shadow-custom after:absolute after:-bottom-2 after:-translate-x-1/2 after:left-1/2 after:bg-black after:z-20">
-          <p class="w-max" style="max-width: 500px;">{currentMessage()}</p>
+        <div class="absolute left-4/2 -translate-x-1/2 -translate-y-32 mt-1 w-auto max-h-[400px] p-2 bg-black text-white text-center rounded-lg z-10 shadow-custom border border-primary-500 whitespace-normal after:content-[''] after:block after:rotate-45 after:w-4 after:h-4 after:shadow-custom after:absolute after:-bottom-2 after:-translate-x-1/2 after:left-1/2 after:bg-black after:z-20">
+          <p style="max-width: 250px;" class="w-max text-xs md:text-xm">{currentMessage()}</p>
         </div>
       </Show>
     </div>

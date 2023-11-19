@@ -1,5 +1,5 @@
 .tooltip {
-  @apply relative inline-block cursor-pointer p-2 bg-blue-500 text-white rounded;
+  @apply absolute inline-block cursor-pointer p-2 bg-blue-500 text-white rounded;
 }
 
 .tooltiptext {
@@ -9,3 +9,4 @@
 .tooltip:hover .tooltiptext {
   @apply opacity-100 transform translate-y-0;
 }
+

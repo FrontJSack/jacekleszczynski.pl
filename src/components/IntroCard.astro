@@ -8,40 +8,40 @@ import Tooltip from "./Tooltip/index";
 
 <Card colSpan="md:col-span-3" rowSpan="md:row-span-2">
   <div class="flex w-full h-full">
-    <div class="flex flex-col justify-between md:max-h-[300px] gap-4">
+    <div class="flex flex-col justify-center md:max-h-[300px] gap-4 ">
       <div class="flex flex-col h-full">
         <h6 class="text-sm font-light m-0 text-gray-500">welcome</h6>
-        <p class="m-0 font-light text-xl">
+        <p class="m-0 font-light text-xs md:text-xl">
           Hi, I'm <b class="font-bold">Jacek Leszczyński</b>, founder of Dg Spectrum Software House, a fullstack software
           developer with strong focus on the user experience, animations and
           micro interactions
         </p>
       </div>
-      <div class="flex gap-4">
+      <div class="flex xs:col-span-2 gap-1 md:gap4">
+        <Tooltip client:visible>
+          <Button>
+            <Icon name="mdi:format-quote-close" class="h-5" />
+            <span class="sr-only">Regenerate Your Sanity</a></span>
+          </Button>
+        </Tooltip>
         <a href={LINKS.github} aria-label="github profile" target="_blank">
           <Button aria-label="github profile">
-            <Icon name="ri:github-fill" class="h-6" />
+            <Icon name="ri:github-fill" class="h-5" />
             <span class="sr-only">GitHub Profile</span>
           </Button>
         </a>
         <a href={LINKS.cv} aria-label="cvg profile" target="_blank">
           <Button aria-label="My CV">
-            <Icon name="mdi:note-multiple" class="h-6" />
+            <Icon name="mdi:note-multiple" class="h-5" />
             <span class="sr-only">My CV</span>
           </Button>
         </a>
         <a href="mailto:jacek@dgspectrum.com" aria-label="mail to me" target="_blank">
           <Button aria-label="mail me">
-            <Icon name="mdi:email" class="h-6" />
+            <Icon name="mdi:email" class="h-5" />
             <span class="sr-only">Mail to me, i'll try to response in 24h</span>
           </Button>
         </a>
-        <Tooltip client:visible>
-          <Button aria-label="easter egg btn">
-            <Icon name="mdi:format-quote-close" class="h-6" />
-            <span class="sr-only">Regenerate Your Sanity</a></span>
-          </Button>
-        </Tooltip>
       </div>
     </div>
     <img
