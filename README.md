@@ -33,4 +33,4 @@ $ npm run dev
 ## Authors ❤️
 
 - Jacek Leszczyński - https://github.com/FrontJSack/
-- Astro team - https://github.com/FrontJSack/
+- Astro team - https://astro.build/
