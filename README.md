@@ -1,12 +1,4 @@
-# ⚡️Grid-astro-portfolio⚡️
-
-## A personal portfolio website made using `Astro`.
-
-<p align="left">
-    <img width="500" height="auto" src="https://i.imgur.com/qB3UV2j.png" alt="homepagescreenshot" />
-</p>
-
-To view a demo example, **[click here](https://jacekleszczynski.pl/)**
+To view my page on production, **[click here](https://jacekleszczynski.pl/)**
 
 ## Features
 
@@ -14,18 +6,18 @@ To view a demo example, **[click here](https://jacekleszczynski.pl/)**
 - All in one page (almost)
 - Fully Responsive
 - Performances and SEO optimizations
-- Ready to be deployed on [Netlify](https://www.netlify.com/)
+- Ready to be deployed on any Node.js 18.0.0 <= version as static build output. Thanks to https://astro.build/ for easing my job, check up their tech and themes!   
 
 # Steps ▶️
 
 ```
 # Clone this repository
-$ git clone https://github.com/Ladvace/grid-astro-portfolio
+$ git clone https://github.com/FrontJSack/jacekleszczynski.pl.git
 ```
 
 ```
 # Go into the repository
-$ cd grid-astro-portfolio
+$ jacekleszczynski.pl (feel free to fork and change the name of course)
 ```
 
 ```
@@ -38,12 +30,7 @@ $ npm install
 $ npm run dev
 ```
 
-# Deploy on Netlify 🚀
-
-Deploying your website on Netlify it's optional but I reccomand it in order to deploy it faster and easly.
-
-You just need to fork this repo and linking it to your Netlify account.
-
 ## Authors ❤️
 
-- Gianmarco - https://github.com/Ladvace
+- Jacek Leszczyński - https://github.com/FrontJSack/
+- Astro team - https://github.com/FrontJSack/
